@@ -1,6 +1,6 @@
 #!usr/bin/env groovy
 
-def call() {
+def call(String imageName) {
     sh 'docker system prune --all'
-    sh 'docker build -t test19-auto .'
+    sh "docker build -t $imageName ."
 }
